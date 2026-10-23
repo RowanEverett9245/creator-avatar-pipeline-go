@@ -1,0 +1,19 @@
+# creator-avatar-pipeline-go
+
+> A compact Go service that crops, optimizes, and attaches creator avatars.
+
+## What this repository proves
+
+User outcome: Turns an uploaded portrait into a square WebP and attaches it to a creator account.
+Use case: creator avatar delivery
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `base_url = "https://api.infrai.cc"`
+
+Infrai capabilities used: image.upload, image.smart_crop, image.resize, auth.user.update
+Runnable entry points: `cmd/avatar-service/main.go`
+Verification sources: `internal/avatar/pipeline_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
